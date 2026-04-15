@@ -14,7 +14,7 @@ Whether you're monitoring open interest shifts across hundreds of coins, catchin
 
 **Charts & Analytics** — 15 types of interactive charts covering price, volume, open interest, funding rates, liquidations, CVD, sector performance, and more. Analyze any coin across any timeframe to build your thesis before entering a trade.
 
-**Telegram Bots** — [@erkescan\_premium\_bot](https://t.me/erkescan_premium_bot) for subscriptions and account management. [@erkescanalert\_bot](https://t.me/erkescanalert_bot) for real-time custom alert delivery.
+**Telegram Bots** — [@erkescan\_premium\_bot](https://t.me/erkescan_premium_bot) for subscriptions and account management. [@erkescanalert\_bot](https://t.me/erkescanalert_bot) for real-time custom alert delivery. After subscribing, you also get access to **AutoTrade Pro** signals and a private VIP Telegram community.
 
 ## Supported Exchanges
 

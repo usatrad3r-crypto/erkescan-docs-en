@@ -1,5 +1,9 @@
 # Features & Tools
 
+### What is AutoTrade Pro?
+
+AutoTrade Pro is an automated signal service included with every subscription. Signals are delivered to a private VIP Telegram channel and include: coin, direction (LONG or SELL), entry price, stop-loss, three take-profit targets (TP1/TP2/TP3), signal confidence level, and a potential loss/profit ratio. Access is granted automatically after your subscription is confirmed via [@erkescan\_premium\_bot](https://t.me/erkescan_premium_bot).
+
 ### How many custom alerts can I create?
 
 Unlimited. There is no cap on the number of alerts you can set up.

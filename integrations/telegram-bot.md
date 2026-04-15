@@ -41,6 +41,18 @@ This bot delivers your custom alert notifications. When a coin meets the conditi
 3. Create at least one alert in the web app at [app.erkescan.com](https://app.erkescan.com)
 4. Alerts will be delivered to this bot automatically
 
+## After Subscribing — VIP Channel & AutoTrade Pro
+
+Once your subscription is confirmed, [@erkescan\_premium\_bot](https://t.me/erkescan_premium_bot) will provide you with access to:
+
+- **VIP Telegram Channel** — a private community for active subscribers
+- **AutoTrade Pro** — a dedicated channel where automated trading signals are delivered, including:
+  - Coin and direction (LONG / SELL)
+  - Entry price and order type
+  - Stop-loss level
+  - Three take-profit targets (TP1, TP2, TP3)
+  - Signal confidence and potential loss/profit ratio
+
 ## Language Support
 
 Both bots support **English** and **Russian**. You can change your language at any time through the bot menu.

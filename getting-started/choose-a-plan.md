@@ -13,12 +13,12 @@ ErkeScan offers three subscription plans. All plans include the same full featur
 ## What's Included (All Plans)
 
 - Full access to the Real-Time Screener with all 30+ metrics
-- Signal Scanner with momentum grading (A–F) and HC signals
+- Signals tab with momentum grading (A–F) and HC signals
 - Unlimited custom alert creation
-- Telegram alert delivery
-- 16 types of interactive charts and analytics
-- Whale tracking and trade monitoring
-- VIP Telegram community access
+- Custom alert delivery via Telegram ([@erkescanalert\_bot](https://t.me/erkescanalert_bot))
+- 15 types of interactive charts and analytics
+- **AutoTrade Pro** — automated trading signals with entry, stop-loss, and take-profit levels delivered to a private VIP Telegram channel
+- Access to the VIP Telegram community
 - Discord integration for closed community members
 - Multi-device access (use on desktop, tablet, phone)
 
