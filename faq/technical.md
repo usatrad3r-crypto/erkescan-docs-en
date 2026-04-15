@@ -14,7 +14,7 @@ Try these steps: (1) Refresh the page. (2) Clear your browser cache. (3) Check y
 
 ### Telegram notifications aren't coming through. What should I check?
 
-Make sure you: (1) Started the bot by sending `/start` to [@erkescan\_bot](https://t.me/erkescan_bot). (2) Have an active subscription. (3) Have at least one alert configured in the web app. (4) Haven't blocked or muted the bot in Telegram. (5) Have Telegram notifications enabled on your device.
+Make sure you: (1) Started the bot by sending `/start` to [@erkescanalert\_bot](https://t.me/erkescanalert_bot). (2) Have an active subscription. (3) Have at least one alert configured in the web app. (4) Haven't blocked or muted the bot in Telegram. (5) Have Telegram notifications enabled on your device.
 
 ### Discord is connected but access isn't working.
 
@@ -31,4 +31,4 @@ Contact us via the Support option in the Telegram bot or reach out to [@erkescan
 ### Where can I get help?
 
 - **Telegram:** [@erkescan\_support](https://t.me/erkescan_support)
-- **Telegram Bot:** [@erkescan\_bot](https://t.me/erkescan_bot) → Support option
+- **Telegram Bot:** [@erkescanalert\_bot](https://t.me/erkescanalert_bot) → Support option

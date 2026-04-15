@@ -44,10 +44,6 @@ ErkeScan provides 16 types of interactive charts that let you analyze any coin f
 
 **Spaghetti Charts** — Multi-line chart that overlays 4–10 coins on the same chart for direct comparison. See [Spaghetti Charts](spaghetti-charts.md) for details.
 
-### Whale Activity
-
-**Whale Trades Chart** — Visual representation of large transactions over time, correlated with price action.
-
 ## How to Use Charts
 
 1. Navigate to **Charts** in the sidebar

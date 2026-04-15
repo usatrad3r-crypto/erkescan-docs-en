@@ -14,11 +14,11 @@ Your subscription activates automatically within 5–10 minutes after your crypt
 
 ### Can I subscribe through the Telegram bot?
 
-Yes. Open [@erkescan\_bot](https://t.me/erkescan_bot), tap **Subscribe**, choose your plan, and complete the payment. Works exactly the same as subscribing through the web app.
+Yes. Open [@erkescan\_premium\_bot](https://t.me/erkescan_premium_bot), tap **Subscribe**, choose your plan, and complete the payment. Works exactly the same as subscribing through the web app.
 
 ### Where can I check my subscription status?
 
-In the web app: go to the **Billing** page. In Telegram: tap **Profile** in the bot menu. Both show your current plan and expiration date.
+In the web app: go to the **Billing** page. In Telegram: tap **Profile** in [@erkescan\_premium\_bot](https://t.me/erkescan_premium_bot). Both show your current plan and expiration date.
 
 ### What happens when my subscription expires?
 

@@ -2,11 +2,11 @@
 
 ### What is ErkeScan?
 
-ErkeScan is a cryptocurrency futures market intelligence platform. It collects real-time data from Binance, Bybit, and Hyperliquid, processes it through advanced analytics, and delivers actionable insights through a web dashboard, Telegram bot, and Discord community. It includes a real-time screener, signal scanner, custom alerts, interactive charts, and whale tracking.
+ErkeScan is a cryptocurrency futures market intelligence platform. It collects real-time data from Binance, Bybit, and Hyperliquid, processes it through advanced analytics, and delivers actionable insights through a web dashboard and Telegram. It includes a real-time screener, a Signals tab, custom alerts, and interactive charts.
 
 ### How is ErkeScan different from other crypto screeners?
 
-Three key differences: (1) ErkeScan aggregates data from three exchanges, not just one, giving you a more complete view. (2) Our Signal Scanner uses a proprietary 9-factor grading system that evaluates the full picture, not just single metrics. (3) You get unlimited custom alerts — most platforms either limit alerts or charge extra for them.
+Three key differences: (1) ErkeScan aggregates data from three exchanges, not just one, giving you a more complete view. (2) The Signals tab uses a proprietary multi-factor grading system that evaluates the full picture, not just single metrics. (3) You get unlimited custom alerts — most platforms either limit alerts or charge extra for them.
 
 ### Which exchanges does ErkeScan support?
 

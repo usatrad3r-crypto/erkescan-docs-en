@@ -6,10 +6,9 @@ To get the most out of ErkeScan, connect your Telegram and Discord accounts. Thi
 
 Telegram is where you'll receive all your custom alert notifications and signal updates.
 
-1. Open [@erkescan\_bot](https://t.me/erkescan_bot) in Telegram
-2. Tap **Start** to initialize the bot
-3. Follow the bot's instructions to link your account
-4. Once connected, your custom alerts and signal notifications will be delivered directly to your Telegram
+1. Open [@erkescanalert\_bot](https://t.me/erkescanalert_bot) in Telegram and send `/start` — this bot delivers your custom alert notifications
+2. Open [@erkescan\_premium\_bot](https://t.me/erkescan_premium_bot) and send `/start` — this bot handles subscriptions and account management
+3. Make sure you have an active subscription and at least one alert configured in the web app
 
 ## Connect Discord
 

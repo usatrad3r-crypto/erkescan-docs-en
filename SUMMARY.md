@@ -13,15 +13,13 @@
 ## Features
 
 * [Real-Time Screener](features/screener.md)
-* [Signal Scanner](features/signal-scanner.md)
 * [Custom Alerts](features/custom-alerts.md)
 * [Charts & Analytics](features/charts-and-analytics.md)
-* [Whale Tracking](features/whale-tracking.md)
 * [Spaghetti Charts](features/spaghetti-charts.md)
 
 ## Integrations
 
-* [Telegram Bot](integrations/telegram-bot.md)
+* [Telegram Bots](integrations/telegram-bot.md)
 * [Discord](integrations/discord.md)
 
 ## Resources
