@@ -16,9 +16,9 @@ Try these steps: (1) Refresh the page. (2) Clear your browser cache. (3) Check y
 
 Make sure you: (1) Started the bot by sending `/start` to [@erkescan\_bot](https://t.me/erkescan_bot). (2) Have an active subscription. (3) Have at least one alert configured in the web app. (4) Haven't blocked or muted the bot in Telegram. (5) Have Telegram notifications enabled on your device.
 
-### My Discord Trader role disappeared.
+### Discord is connected but access isn't working.
 
-The Trader role is tied to your subscription. Check that your subscription is active in the Billing section. If it is active and the role is still missing, try disconnecting and reconnecting Discord in the Integrations page.
+Make sure you are connecting the Discord account associated with your community membership. Try disconnecting and reconnecting via the Integrations page. If the issue persists, contact support.
 
 ### Browser-specific settings storage
 
@@ -26,10 +26,9 @@ The screener saves your preferences (column arrangement, sort order, favorites) 
 
 ### I found a bug or have a feature request.
 
-Contact us at [info@erkescan.com](mailto:info@erkescan.com) or use the Support option in the Telegram bot. We actively develop the platform and appreciate user feedback.
+Contact us via the Support option in the Telegram bot or reach out to [@erkescan\_support](https://t.me/erkescan_support). We actively develop the platform and appreciate user feedback.
 
 ### Where can I get help?
 
-- **Email:** [info@erkescan.com](mailto:info@erkescan.com)
+- **Telegram:** [@erkescan\_support](https://t.me/erkescan_support)
 - **Telegram Bot:** [@erkescan\_bot](https://t.me/erkescan_bot) → Support option
-- **Discord:** Ask in the community channels

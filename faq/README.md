@@ -7,4 +7,4 @@ Find answers to the most common questions about ErkeScan. Select a category belo
 - [Features & Tools](features.md) — Screener, signals, alerts, charts, whale tracking
 - [Technical Support](technical.md) — Troubleshooting, connectivity, device support
 
-Can't find your answer? Contact us at [info@erkescan.com](mailto:info@erkescan.com) or reach out via the Telegram bot's Support option.
+Can't find your answer? Contact us at [@erkescan\_support](https://t.me/erkescan_support) on Telegram or use the Support option in [@erkescan\_bot](https://t.me/erkescan_bot).

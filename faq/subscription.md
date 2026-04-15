@@ -22,11 +22,11 @@ In the web app: go to the **Billing** page. In Telegram: tap **Profile** in the 
 
 ### What happens when my subscription expires?
 
-You'll lose access to premium features: custom alert delivery stops, signal scanner access is restricted, and your Discord Trader role is removed. Your account and alert configurations are preserved — when you resubscribe, everything is restored.
+You'll lose access to premium features: custom alert delivery stops and signal scanner access is restricted. Your account and alert configurations are preserved — when you resubscribe, everything is restored.
 
 ### Can I get a refund?
 
-Due to the digital nature of the service and cryptocurrency payment, refunds are handled on a case-by-case basis. Contact [info@erkescan.com](mailto:info@erkescan.com) to discuss.
+Due to the digital nature of the service and cryptocurrency payment, refunds are handled on a case-by-case basis. Contact [@erkescan\_support](https://t.me/erkescan_support) on Telegram to discuss.
 
 ### Do you send renewal reminders?
 

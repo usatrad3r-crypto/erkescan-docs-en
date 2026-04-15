@@ -23,7 +23,7 @@ This raw data is processed through our analytics engine, which calculates 30+ de
 
 1. **Web Dashboard** at [app.erkescan.com](https://app.erkescan.com) — a real-time screener with interactive charts and custom alert configuration
 2. **Telegram Bot** — instant notifications when your alert conditions are triggered or when our signal scanner detects a high-probability setup
-3. **Discord Community** — shared insights and VIP access for subscribers
+3. **Discord** — available for members of our closed community
 
 ## Who Is ErkeScan For?
 

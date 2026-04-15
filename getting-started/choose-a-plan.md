@@ -19,7 +19,7 @@ ErkeScan offers three subscription plans. All plans include the same full featur
 - 16 types of interactive charts and analytics
 - Whale tracking and trade monitoring
 - VIP Telegram community access
-- Discord Trader role and community features
+- Discord integration for closed community members
 - Multi-device access (use on desktop, tablet, phone)
 
 ## How to Pay

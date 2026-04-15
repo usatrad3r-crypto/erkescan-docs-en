@@ -16,7 +16,7 @@ Whether you're monitoring open interest shifts across 200+ coins, catching momen
 
 **Whale Tracking** — See what the big players are doing. Track large transactions, analyze whale trading patterns, view top trader leaderboards, and get real-time alerts when significant money moves.
 
-**Telegram & Discord** — Receive alerts, signals, and market updates directly in Telegram. Connect your Discord for community access and role-based features.
+**Telegram & Discord** — Receive alerts, signals, and market updates directly in Telegram. Connect your Discord if you are a member of our closed community.
 
 ## Supported Exchanges
 
@@ -35,4 +35,4 @@ Ready to get started? Head to [Create Your Account](getting-started/create-your-
 **Website:** [erkescan.com](https://erkescan.com)\
 **Web App:** [app.erkescan.com](https://app.erkescan.com)\
 **Telegram Bot:** [@erkescan\_bot](https://t.me/erkescan_bot)\
-**Support:** [info@erkescan.com](mailto:info@erkescan.com)
+**Support:** [@erkescan\_support](https://t.me/erkescan_support) on Telegram
