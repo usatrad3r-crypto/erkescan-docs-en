@@ -1,0 +1,14 @@
+root: ./
+
+structure:
+  readme: README.md
+  summary: SUMMARY.md
+
+# Keep old published URLs alive after the 2026-07-31 restructure.
+redirects:
+  features/screener: screener/tour.md
+  features/custom-alerts: alerts/how-alerts-work.md
+  features/charts-and-analytics: screener/charts.md
+  features/spaghetti-charts: screener/charts.md
+  features/signal-scanner: premium/overview.md
+  supported-exchanges: reference/data-and-coverage.md

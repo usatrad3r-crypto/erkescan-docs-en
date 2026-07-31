@@ -1,33 +1,52 @@
 # Table of contents
 
 * [Welcome to ErkeScan](README.md)
-* [What is ErkeScan?](what-is-erkescan.md)
+* [What ErkeScan does](what-is-erkescan.md)
 
-## Getting Started
+## Getting started
 
-* [Create Your Account](getting-started/create-your-account.md)
-* [Choose a Subscription Plan](getting-started/choose-a-plan.md)
-* [Connect Telegram & Discord](getting-started/connect-integrations.md)
-* [Your First Steps](getting-started/first-steps.md)
+* [1. Create your account](getting-started/create-your-account.md)
+* [2. Choose a plan](getting-started/choose-a-plan.md)
+* [3. Connect Telegram & Discord](getting-started/connect-integrations.md)
+* [4. Your first 15 minutes](getting-started/first-steps.md)
 
-## Features
+## The Screener
 
-* [Real-Time Screener](features/screener.md)
-* [Custom Alerts](features/custom-alerts.md)
-* [Charts & Analytics](features/charts-and-analytics.md)
-* [Spaghetti Charts](features/spaghetti-charts.md)
+* [Screener tour](screener/tour.md)
+* [How to read the table](screener/reading-the-table.md)
+* [Column reference](screener/column-reference.md)
+* [Quick filters](screener/quick-filters.md)
+* [Make it your own](screener/personalize.md)
+* [Build your own filters](screener/build-your-own-filters.md)
+* [Filter recipes](screener/recipes.md)
+* [Coin view](screener/coin-view.md)
+* [Charts page](screener/charts.md)
+* [From screen to trade](screener/from-screen-to-trade.md)
+* [Troubleshooting](screener/troubleshooting.md)
+
+## Alerts
+
+* [How alerts work](alerts/how-alerts-work.md)
+* [Create an alert](alerts/create-an-alert.md)
+* [Alert recipes](alerts/alert-recipes.md)
+* [Manage your alerts](alerts/managing-alerts.md)
 
 ## Integrations
 
-* [Telegram Bots](integrations/telegram-bot.md)
+* [Telegram bots](integrations/telegram-bot.md)
 * [Discord](integrations/discord.md)
 
-## Resources
+## Also included
 
-* [Supported Exchanges](supported-exchanges.md)
+* [Premium signal channels](premium/overview.md)
+
+## Reference
+
+* [Data & coverage](reference/data-and-coverage.md)
 * [Glossary](glossary.md)
 * [FAQ](faq/README.md)
-  * [General Questions](faq/general.md)
-  * [Subscription & Billing](faq/subscription.md)
-  * [Features & Tools](faq/features.md)
-  * [Technical Support](faq/technical.md)
+  * [General questions](faq/general.md)
+  * [Subscription & billing](faq/subscription.md)
+  * [Features & tools](faq/features.md)
+  * [Technical support](faq/technical.md)
+* [Get help](reference/support.md)

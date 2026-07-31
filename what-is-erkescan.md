@@ -1,49 +1,88 @@
-# What is ErkeScan?
+# What ErkeScan is
 
-ErkeScan is an advanced cryptocurrency futures market screener and analytics platform. Think of it as your personal market radar — constantly scanning hundreds of trading pairs across multiple exchanges, detecting unusual activity, and alerting you before major price moves happen.
+This page explains what the product actually does, where the numbers come from, and — just as importantly — what it does not do. Read it before you start clicking, so you know what you are looking at.
 
-## The Problem We Solve
+## The problem it solves
 
-Crypto futures markets move fast. Hundreds of coins trade simultaneously across multiple exchanges. Key signals — a sudden spike in open interest, an unusual volume surge, a funding rate flip — often appear minutes before a big price move. No human can watch all of this at once.
+Binance lists roughly 670 USDT-margined [perpetual futures](glossary.md) contracts, and they all trade at once. You cannot hold 670 charts in your head, and by the time a move is obvious on a chart, the part you wanted is often already priced in.
 
-ErkeScan watches everything for you, 24/7.
+The things that describe a move are not the price line. They are turnover, [relative volume](glossary.md), the direction of the order flow ([VDelta](glossary.md)), whether [open interest](glossary.md) is growing or unwinding, whether [funding](glossary.md) is punishing one side, and how many separate trades the turnover is split across.
 
-## How It Works
+Every one of those numbers exists on the exchange. The problem is that they live in different endpoints, on different time windows, for hundreds of symbols, and nobody is going to assemble them by hand every five minutes.
 
-ErkeScan connects directly to the data streams of Binance Futures, Bybit, and Hyperliquid. Every second, we collect and process:
+ErkeScan assembles them. It is one table, one row per contract, with every metric on a stated window, so you can sort ~670 contracts by the number that matters to the question you are asking and be left with five rows to look at.
 
-- **Price data** across all listed futures pairs
-- **Trading volume** broken down by buy and sell pressure
-- **Open interest** changes that reveal new money entering or exiting positions
-- **Funding rates** that show market sentiment and leverage imbalance
-- **Liquidation events** that can trigger cascading price moves
-- **Whale transactions** that signal institutional activity
+{% hint style="info" %}
+No metric or filter here predicts anything. What the screener gives you is a shorter list to investigate. The Accumulation filter, for example, encodes a common reading — open interest up more than 3% over the past hour, relative volume above 1.5, and price moved less than 1% in that hour — but that reading is a heuristic, not a forecast, and it is wrong often enough to need a stop.
+{% endhint %}
 
-This raw data is processed through our analytics engine, which calculates 30+ derived metrics across multiple timeframes (5 minutes, 15 minutes, 1 hour, 8 hours, 1 day). The results are delivered to you in three ways:
+## How the data reaches your screen
 
-1. **Web Dashboard** at [app.erkescan.com](https://app.erkescan.com) — a real-time screener with interactive charts and custom alert configuration
-2. **Telegram Bot** — instant notifications when your alert conditions are triggered or when our signal scanner detects a high-probability setup
-3. **Discord** — available for members of our closed community
+### One exchange, one feed
 
-## Who Is ErkeScan For?
+Everything in the screener, the alerts engine and the charts page comes from **Binance USDT-margined perpetual futures**, and nothing else.
 
-ErkeScan is built for crypto futures traders of all experience levels:
+The tradable list is rebuilt from Binance about every 60 seconds, so newly listed contracts appear on their own and delisted ones drop out. Only symbols quoted in USDT are kept: USDC-quoted pairs and dated quarterly contracts (the ones with an expiry in the name) never reach your table.
 
-- **Active day traders** who need real-time data to catch intraday moves
-- **Swing traders** who want to spot accumulation or distribution patterns before they play out
-- **Research-focused traders** who use data-driven analysis to build trade theses
-- **Risk managers** who monitor funding rates, liquidation levels, and whale positioning
+Roughly 140 of those contracts are not coins. Binance lists tokenized stocks and commodities as perpetuals, and they arrive through the same pipe with the same columns; most of them show a **STOCK** or **COMMODITY** badge beside the ticker.
 
-You don't need to be a programmer or quant. ErkeScan's interface is designed to be intuitive — if you can read a table and set a filter, you can use ErkeScan.
+### From exchange to table
 
-## What Makes ErkeScan Different
+1. Candles for the 5m, 15m and 1h intervals stream in over a live WebSocket connection. The 8h and 1d candles are fetched over REST once per bar, shortly after the bar closes, and then stay fixed until the next one.
+2. Trade events stream in continuously and are counted into 5-second buckets. These are Binance *aggregated* trades — fills from one taker order at one price arrive as a single event — and they are what feeds the Ticks columns and the RetailHeat column.
+3. Funding is refreshed about hourly, and open interest for the whole universe about every 5 minutes.
+4. Twenty candles are retained per interval per contract. Everything derived — relative volume, volatility, BTC correlation — is computed from those buffers. This is why a column's name is not its window: "Volatility 5m" is the spread of twenty 5-minute candles, about 100 minutes, not the last five. The [column reference](screener/column-reference.md) states the true window of every metric.
+5. One merge pass recomputes the whole snapshot. It runs **at most once every ~2 seconds, and only when new data has actually arrived** from the exchange. There is no fixed heartbeat, so quiet periods produce fewer updates.
+6. Your browser receives finished snapshots over a live stream. If that stream is not available, the page falls back to fetching a fresh snapshot every 3 seconds instead — you keep the data either way.
+7. The alerts engine reads the same snapshots on its own cycle, roughly every 5 seconds, independently of whether your browser is open.
 
-**Multi-exchange coverage** — Most screeners only track Binance. ErkeScan aggregates data from Binance, Bybit, and Hyperliquid, giving you a more complete picture of the market.
+### When something upstream breaks
 
-**Signal Scanner with grading** — Our proprietary momentum engine doesn't just tell you something is moving. It grades setups from A (strongest) to F (weakest) based on 9 factors, so you can focus on the highest-probability opportunities.
+Missing data is shown as missing. If a candle feed goes stale or a value never arrived, the cell renders a dash (`—`) — the product does not fabricate a `0.00` to fill the gap, and dashes always sort to the bottom of the table on both ascending and descending sorts.
 
-**Unlimited custom alerts** — Other platforms limit alert creation or charge extra. With ErkeScan, create as many alerts as you need using any combination of 30+ metrics.
+A contract missing its 5m or 15m candles is withheld from the table entirely rather than shown half-empty.
 
-**Real-time streaming** — No page refreshes needed. Data flows to your screen via live streaming, so you see changes the instant they happen.
+The **connection indicator** in the header has six states: connected, polling, reconnecting, loading, stale and error. Stale means no accepted snapshot for more than 30 seconds, or that the newest price update across the entire universe has not advanced for more than 60 seconds. Error means more than 120 seconds with no accepted snapshot.
 
-**Whale intelligence** — Track what the biggest players in the market are doing, with dedicated whale alerts and trading pattern analysis.
+{% hint style="warning" %}
+In the stale and error states a warning strip appears above the table. It is there because prices can freeze while the page still looks alive. Never size a trade off a frozen quote — refresh and confirm on the exchange first.
+{% endhint %}
+
+→ [Reading the table](screener/reading-the-table.md) · [Data and coverage](reference/data-and-coverage.md)
+
+## What ErkeScan is not
+
+**It is not a trading bot or an auto-trader.** Nothing in the product connects to your exchange account, places an order, sets a stop or closes a position. There is no execution path anywhere in it. Every trade you take from something you saw here, you place yourself on the exchange.
+
+**It is not a multi-exchange aggregator.** The screener universe, the 29 alert conditions and the charts page are Binance USDT perpetuals only. If a Binance REST endpoint stops answering, a backup venue can temporarily stand in for those specific REST values so the table keeps updating — but two venues are never mixed inside one number, and the order-flow columns go to a dash rather than guess when the backup does not supply what they need.
+
+**It is not a signals-only service.** The strategy pages under **Signals** are part of what you get, and your subscription is what reveals the live levels on them — but they are not the product. The product is the screener you drive yourself; the signals sit beside it.
+
+**It is not a fundamentals tool.** There is no market-cap data anywhere — no column, no filter, no alert condition. There is no ETH correlation either; correlation is measured against BTC only, on 5m, 15m, 1h, 8h and 1d windows. If your process starts with "show me mid-caps under $500M", this is not the tool for that step.
+
+**It is not advice.** ErkeScan reports what the market did. It does not tell you what to do, and no number on the screen carries a guarantee.
+
+## Who gets the most out of it
+
+You will get a lot out of ErkeScan if you:
+
+- **trade Binance USDT perpetuals** on intraday to multi-day horizons, and want the whole board rather than a watchlist of ten favourites;
+- **work from flow and positioning** — volume, order-flow delta, open-interest change and funding — rather than from indicators alone;
+- **want to be told, not to watch** — up to 200 custom alerts on 29 fields, delivered to Telegram, with a 15-minute chart image attached whenever it can be fetched;
+- **like reading numbers.** The table rewards someone who will learn what each window actually measures, because the windows are deliberately not uniform and the difference matters.
+
+You will get less out of it if you trade spot only, trade on an exchange other than Binance, hold positions for months, or want something that trades for you.
+
+## Languages
+
+The interface is available in **English** and **Russian**. Your language on a first visit is taken from your browser: Russian if your browser's top language starts with `ru`, English otherwise. You change it with the **EN | RU** pill in the top right of the header, on any page.
+
+All 57 column headers and all 57 column tooltips have a Russian version, as do the quick-filter chips and the rest of the screener. Four chips in the column picker — the 8h and 1d entries under **Bar Vol Δ $** and **Bar Vol Δ %** — stay in English for Russian users; the matching table headers are translated normally.
+
+Switching language does not change the URL of an app page. There is no separate Russian address to bookmark or send to someone — each person sets their own language, and the choice is remembered in that browser for a year.
+
+App pages are also excluded from search-engine indexing, so you will not find your screener or billing page through a web search. Use the links in this manual or the app's own navigation.
+
+---
+
+**Next:** [Create your account](getting-started/create-your-account.md)
