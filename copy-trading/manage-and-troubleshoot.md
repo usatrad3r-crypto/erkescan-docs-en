@@ -1,9 +1,5 @@
 # Controls and troubleshooting
 
-{% hint style="warning" %}
-There is a [10×/30× leverage mismatch in the connection terms](risk-and-execution.md). Until it is resolved, do not perform the actions below that start or resume new entries. Checking status, pausing and managing existing positions are separate actions. This notice does not stop a running bot.
-{% endhint %}
-
 Start with the selected Bybit account, the bot status and the time of the last check. A page that cannot load current status does not tell you whether the exchange position has closed. Verify an open position directly on Bybit when needed.
 
 ## Pause, sign out, close or delete

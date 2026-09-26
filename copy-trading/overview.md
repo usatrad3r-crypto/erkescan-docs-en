@@ -1,13 +1,5 @@
 # Vertex copy trading
 
-{% hint style="warning" %}
-**Connection-terms mismatch — September 26, 2026**
-
-ErkeScan's consent page still states **10×** leverage, while the current public Vertex configuration uses **30×**. Until this mismatch is resolved, **do not confirm a new connection or proceed to start or restart the bot using this guide**. These instructions are published for reference and do not replace consent to terms that match the service's actual operation. Contact [support](https://t.me/ErkeScanSupportbot) to clarify the connection terms; never send API keys or secrets.
-
-If your bot is already running, this notice does not pause it. To stop new entries, use **Pause** in ErkeScan; pausing does not close an existing position. Check your position and protective orders on Bybit.
-{% endhint %}
-
 Vertex copy trading can open and manage trades automatically on your connected Bybit account. You choose the risk per trade, connect a dedicated account and explicitly start the bot. Funds remain on Bybit.
 
 Open [Copy trading](https://app.erkescan.com/copy-trading) in ErkeScan. Vertex is available; Helix copy trading is still in preparation. A Helix signal page or Telegram subscription does not activate a Helix trading bot.
