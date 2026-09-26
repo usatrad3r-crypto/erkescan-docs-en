@@ -15,6 +15,8 @@ The screener, custom alerts and Charts cover Binance USDT perpetual futures. The
 
 ## New here?
 
+You can read this guide before creating an account or choosing a plan.
+
 1. [Create your account](getting-started/create-your-account.md).
 2. [Choose a plan](getting-started/choose-a-plan.md). Compare the term and total price before paying.
 3. [Connect Telegram](getting-started/connect-integrations.md) if you want messages. You do not need to buy another subscription to connect it.
