@@ -1,13 +1,5 @@
 # Connect Bybit to Vertex
 
-{% hint style="warning" %}
-**Connection-terms mismatch — September 26, 2026**
-
-ErkeScan's consent page still states **10×** leverage, while the current public Vertex configuration uses **30×**. Until this mismatch is resolved, **do not confirm a new connection or proceed to start or restart the bot using this guide**. These instructions are published for reference and do not replace consent to terms that match the service's actual operation. Contact [support](https://t.me/ErkeScanSupportbot) to clarify the connection terms; never send API keys or secrets.
-
-If your bot is already running, this notice does not pause it. To stop new entries, use **Pause** in ErkeScan; pausing does not close an existing position. Check your position and protective orders on Bybit.
-{% endhint %}
-
 Open [Copy trading](https://app.erkescan.com/copy-trading) and select Vertex. Complete the account, API and risk steps below. Connecting the key and starting trading are separate operations; finish by checking the displayed bot status.
 
 ## 1. Prepare the account
@@ -36,15 +28,13 @@ Bybit may change the wording or layout of its API settings. The permissions and 
 
 Choose **Risk per trade** in ErkeScan. This is a percentage of the verified available USDT balance, not the amount of margin to allocate. Read the explanation in [Risk and execution](risk-and-execution.md) before accepting the terms.
 
-Do not confirm the form until the mismatch above is resolved. Once consistent terms are published, enter the key and secret only in the app’s connection form, read the required statements and submit only if you agree. Never put the key or secret into a support message, screenshot or journal note.
+Paste the API key and API secret into the connection form. Confirm the required statements and submit. Never put the key or secret into a support message, screenshot or journal note.
 
 Wait for the result. If the page says that the outcome is not yet known or verification is still running, use its status-check or recovery button. The key may already be saved. Repeatedly pasting the same secret is not a way to speed up verification.
 
 If the IP list changes, save the new list in Bybit, return to ErkeScan and use the displayed retry action. For an already saved key, an IP correction normally does not require entering the key again. If the form explicitly says that the key was never saved or its fields were cleared, enter both values when requested.
 
 ## 4. Start and verify
-
-The following step describes starting the bot after the terms mismatch has been resolved.
 
 Use **Start Vertex** or the combined **Check again and start Vertex** action shown by your setup flow. Check the selected account and the resulting status.
 
