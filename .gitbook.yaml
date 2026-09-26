@@ -12,3 +12,4 @@ redirects:
   features/spaghetti-charts: screener/charts.md
   features/signal-scanner: premium/overview.md
   supported-exchanges: reference/data-and-coverage.md
+  features-and-functionalities/spaghetti-charts: screener/charts.md

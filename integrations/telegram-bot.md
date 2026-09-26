@@ -1,142 +1,51 @@
 # Telegram bots
 
-Everything ErkeScan sends you arrives in Telegram. This page is the full reference for it: which bot does what, how your chat genuinely becomes linked, exactly what lands in your chat, and what to check when nothing does.
+ErkeScan uses different bots for delivery, purchases and help. Start from the appropriate official link:
 
-If you are setting this up for the first time, follow [Connect integrations](../getting-started/connect-integrations.md) first — the step-by-step lives there. This page is the detail behind it.
+| Bot | Use it for |
+| --- | --- |
+| [@erkescanalert_bot](https://t.me/erkescanalert_bot) | Receiving custom alerts and enabled strategy/Radar notifications |
+| [@erkescan_premium_bot](https://t.me/erkescan_premium_bot) | Buying or renewing a subscription, viewing its status and eligible Discord verification |
+| [@ErkeScanSupportbot](https://t.me/ErkeScanSupportbot) | Questions, troubleshooting and operator escalation |
 
-## Three bots, three jobs
+The delivery bot is not a support inbox. Use the support bot for a reply.
 
-ErkeScan runs three customer-facing bots. Mixing them up is the most common reason a customer thinks something is broken.
+## Connect once, choose what to receive
 
-| Bot | What it is for |
-|---|---|
-| **@erkescanalert_bot** | Delivery only. Your [custom alerts](../alerts/how-alerts-work.md) **and** your [premium signals](../premium/overview.md) arrive here |
-| **@erkescan_premium_bot** | Payments, subscription status, and Discord verification |
-| **@ErkeScanSupportbot** | Human support |
+Follow [Connect integrations](../getting-started/connect-integrations.md). The primary path is **Integrations → Connect Telegram → Start in Telegram → return to the app**. There is also a connection control in the screener's alert panel. Use the personal link created by the app, not an ordinary `/start` sent to a bot you opened yourself.
 
-**@erkescanalert_bot is one-way.** It sends; it does not hold a conversation. Typing into it achieves nothing, and nobody reads what you send there. Questions go to **@ErkeScanSupportbot**.
+The standard connection enables Alpha Pulse delivery as well as linking custom alerts. Each strategy has its own switch; turn off a strategy you do not want. Enabling a notification channel does not activate copy trading.
 
-**@erkescan_premium_bot asks your language once.** Send `/start` with no link and it replies with two buttons — **English 🇺🇸** and **Русский 🇷🇺**. That choice applies to the bot's own menus only.
+| What you want to change | Where to do it |
+| --- | --- |
+| Stop one custom alert | Pause or delete it on Alerts |
+| Stop one strategy/Radar channel | Its own Telegram delivery control |
+| Change the Telegram account or disconnect all delivery | Integrations → Unlink Telegram, then confirm |
+| Pause a trading bot | Copy trading; Telegram controls do not do this |
 
-{% hint style="danger" %}
-Those three handles, spelled exactly as above, are the only ErkeScan bots. Look-alike handles with an extra word, a digit or a different suffix are not ours. No ErkeScan bot will ever ask for your password, your seed phrase, your exchange API keys or a full card number.
-{% endhint %}
+## What arrives
 
-## One chat, two kinds of message
+**Custom alerts** identify the alert and contract and list the matching conditions. Units depend on the selected metric. A chart image may be attached; a text-only message can still be a valid alert. Read the timestamp and confirm the current market before acting.
 
-Custom alerts and premium signals land in the **same** chat with **@erkescanalert_bot**, but they are two independent systems with two independent switches. This surprises people constantly.
+**Strategy signals** use the format of their strategy, which can include direction, entry, stop and targets. Do not assume every strategy uses the same stop distance or that a signal's price movement equals account profit. **Radar** is a market observation with a catalyst, not a ready-made entry/stop/target trade.
 
-| | Custom alerts | Premium signals |
-|---|---|---|
-| What produces them | The alert rules you built yourself | A strategy you subscribed to |
-| Where you switch them off | Pause or delete the alert on the [Alerts page](../alerts/managing-alerts.md) | The toggle on that strategy's signal card |
-| Effect on the other | None — signals keep arriving | None — your alerts keep arriving |
+Signals arrive when their conditions occur, not on a fixed timetable. The absence of a new signal is different from a broken Telegram connection. A missed or stale notification is not promised to arrive later.
 
-Both need the same thing first: a linked chat.
+Some messages use Telegram's protected-content setting. This limits built-in forwarding and saving; it is not a guarantee that information cannot be copied. Do not share personal sign-in or Telegram-connection links.
 
-## How your Telegram actually becomes linked
+## Language
 
-Exactly three things attach your Telegram chat to your ErkeScan account:
+The premium subscription bot has its own language selection. Strategy messages use the language captured by their Telegram connection; the website switch is not a universal Telegram-language setting. Custom-alert formatting can differ from strategy messages. The connection test uses the current app language when available.
 
-1. Completing a payment inside **@erkescan_premium_bot**.
-2. Redeeming the one-time Telegram link from a signal page, then pressing **Start**.
-3. Confirming a Discord verification inside **@erkescan_premium_bot** (see [Discord](discord.md)).
+If the message language is wrong, tell support which bot and message type you mean. Changing the website language alone may not change future strategy messages.
 
-[Connect integrations](../getting-started/connect-integrations.md) walks through each one.
+## Messages stopped: check in this order
 
-{% hint style="warning" %}
-Opening **@erkescanalert_bot** yourself and sending `/start` links nothing — the bot answers with a general message and your account is untouched. The same applies to the plain bot link on the Integrations page. The bot only accepts the one-time link a signal page mints for you.
-{% endhint %}
+1. Check your subscription and the email on it.
+2. Check the connection status in Integrations. A failed check means the state could not be confirmed, not necessarily that it is disconnected.
+3. Confirm that @erkescanalert_bot is unblocked. Use the test button if you want a delivery test.
+4. Check the alert is active or that strategy's Telegram switch is on.
+5. For custom alerts, check that all conditions can match the same contract and that the cooldown has ended. No qualifying match means no message.
+6. If a bot says the personal link expired, return to the app: if it is already connected, do not redeem that link again; otherwise create a fresh one.
 
-### What the link writes
-
-When a link succeeds, three things happen at once:
-
-- Your chat is stored against your account, so **custom alerts can be delivered from that moment on**. Alerts you saved earlier start firing on their own — you do not need to re-save them.
-- Your message language is captured from your **Telegram app's own language** at that instant. See [Language](#what-language-your-messages-arrive-in) below.
-- If you linked through a signal page, that strategy's delivery is switched **on** and the bot confirms it in a message of its own.
-
-### The rules the one-time link follows
-
-- Valid for **10 minutes**, usable **once**. Expired or reused, the bot says so — go back to the signal page and press the button again.
-- Your subscription is checked **twice**: when the link is created, and again when you press **Start**.
-- **One Telegram chat belongs to one ErkeScan account.** If the chat is already attached elsewhere, the bot refuses and points you at [support](../reference/support.md).
-- You can mint at most **5 links per 10 minutes**, and flip a strategy's toggle at most **10 times per 10 minutes**. Past that you get a "too many requests" answer; wait it out.
-
-### Proving the link exists
-
-Avatar menu → **Integrations** → in the Telegram card press **Test Telegram Bot**. A working link produces, in Telegram:
-
-> ✅ ErkeScan connection test successful!
-> Your alerts are working correctly.
-
-Anything else — including *"Connection check failed. Please ensure you've connected your Telegram account and haven't blocked the bot."* — means the chat is not linked. Three presses per minute are allowed.
-
-{% hint style="info" %}
-There is no "disconnect Telegram" control in the app. To stop messages, pause or delete your alerts and switch off the premium toggles. Only Discord has a real disconnect button.
-{% endhint %}
-
-## What a custom alert message contains
-
-One message per matched contract. The shape is fixed; the values below are only an example:
-
-> 🔔 **Your alert name**
-> Token: $BTC
-> Change (1H): 4.12
-> Volume (1H): 812345678
-> Date & Time: …
-> Alerts in Last 24H: 3
-> Last Alert for BTC: …
-> View Full Chart: Coinglass
-
-Reading it correctly:
-
-- **One line per condition**, using the metric's fixed display name and its raw value — whole numbers stay whole, otherwise up to four decimals. Units are the metric's own: percent, US dollars, or a count.
-- **Date & Time** carries a timezone label in brackets. That is a fixed platform timezone, not yours.
-- **Last Alert for {ticker}** is the *same* moment as Date & Time in a shorter format. It is not the previous alert's time — do not read it that way.
-- **Alerts in Last 24H** counts messages you received for that ticker across **all** of your alerts in the trailing 24 hours, this one included.
-- Underneath sit two buttons. The first opens that coin in ErkeScan. The second is labelled as an alert-settings button but only opens your alerts list — no edit form opens. Both button labels are in Russian regardless of your language.
-
-A dark 15-minute chart image is attached when it can be fetched in time. It is best-effort: when the fetch fails the identical alert arrives as plain text with all values intact.
-
-Very long alerts get truncated at Telegram's caption limit, and the tail — including the chart link — can be cut. Fewer conditions per alert avoids it.
-
-The full breakdown of the engine behind these messages is in [How alerts work](../alerts/how-alerts-work.md).
-
-## What a premium signal message contains
-
-A signal message carries the direction and the symbol, then **Entry**, **SL**, **TP1** and **TP2**, the signal time in UTC, and a button back to that strategy's page.
-
-Two fixed reminders are printed on every one of them: that exchange prices differ and the signal time is the reference point, and that the stop is always 2% from entry.
-
-The first time a strategy is switched on you also get a **one-time activation notice**, separate from the signals themselves. If that notice fails to send it is retried a few times and then abandoned — you keep receiving trade signals either way, so a missing activation notice is not a delivery problem.
-
-{% hint style="warning" %}
-Both kinds of message are sent with forwarding and saving disabled by Telegram. You cannot pass them on, and neither can anyone you share your screen with. Treat a signal as yours alone.
-{% endhint %}
-
-## What language your messages arrive in
-
-**Premium signals** follow your **Telegram app's language as it was when you linked the chat**: anything starting with `ru` gives Russian, everything else English.
-
-**Custom alerts** arrive in English with the two buttons underneath labelled in Russian. There is no setting for this.
-
-The **EN | RU** switch in the web app changes the website only. It has no effect on anything sent to Telegram.
-
-## When messages do not arrive
-
-Work down this list in order — the first two explain most cases.
-
-1. **Press Test Telegram Bot.** If the test fails, nothing else matters: the chat is not linked. Go back to [Connect integrations](../getting-started/connect-integrations.md).
-2. **Did you block, delete or restrict the bot?** Blocking **@erkescanalert_bot** makes the platform drop your stored chat. Custom alerts then stop **silently** — there is no warning, because there is nowhere left to send one. Unblock the bot and link again.
-3. **Is the alert running?** A paused alert sends nothing. When a subscription lapses, *every* alert of yours is paused automatically, and renewing un-pauses all of them again — including ones you had paused on purpose.
-4. **Is the strategy's toggle still on?** Switching it off stops that strategy from the next dispatch onwards and leaves your custom alerts untouched.
-5. **Was the message simply too old to send?** A custom alert older than 10 minutes when the sender picks it up is dropped rather than delivered late, and a premium signal older than 6 hours is abandoned rather than retried. Both are deliberate: a stale entry is worse than no message.
-6. **Did a burst get throttled?** A loose alert can match many contracts at once, and one message per contract can hit Telegram's own pace limits. Tighten the alert — see [Alert recipes](../alerts/alert-recipes.md).
-7. **Message arrived without a chart?** Nothing is wrong. The image is best-effort; the values in the text are the alert.
-
-If an alert has never fired at all, the cause is usually the alert rather than Telegram — [Manage your alerts](../alerts/managing-alerts.md) has that checklist.
-
-Still stuck? Write to [support](../reference/support.md) with your account email, the alert name, and the time you expected the message.
-
-**Next:** [Discord](discord.md) — what community access gives you, how the link works, and what "Linked" versus "Connected" really means.
+After a lapsed subscription is renewed, alerts paused by the system can resume; alerts you paused yourself remain paused. If the app and Telegram disagree, send [support](../reference/support.md) the message, page, alert/strategy name and time with timezone. Never send an API secret or a sign-in link.

@@ -1,96 +1,42 @@
-# Support
+# Get help
 
-Where to reach a human, what to send so the first reply is useful, and what to expect back.
+Contact [@ErkeScanSupportbot](https://t.me/ErkeScanSupportbot) in Telegram or email <support@erkescan.com>. The app's **Contact us** button opens the same support bot.
 
-## The three official channels
+The bot can answer common questions and pass a case to an operator. Say that you need an operator if its answer does not solve your issue. Automated help and a human reply are different stages; this guide does not promise a fixed response time.
 
-| Channel | Where | Best for |
-|---|---|---|
-| Telegram support bot | [@ErkeScanSupportbot](https://t.me/ErkeScanSupportbot) | Everything. This is the main channel. |
-| Email | support@erkescan.com | Billing records, refunds and appeals, account closure, privacy requests |
-| X | [x.com/erkescan](https://x.com/erkescan) | Listed as a public contact. Telegram or email will get you a faster answer. |
+## Send one useful report
 
-The **Contact us** button (RU: **Поддержка**) in the top-right of every page in the web app
-opens the Telegram support bot in a new tab. It is the same destination as the link above.
+Include:
 
-There is **no chat widget on the website**. Everything goes through the channels in the table.
+1. Your ErkeScan account email, sent privately to support.
+2. The page URL and product: screener, alerts, signals, Radar, Journal, GEX or copy trading.
+3. What you expected and what actually happened.
+4. The time and timezone, such as `14:20 UTC`.
+5. The exact error text and, if relevant, the symbol, alert name or strategy.
+6. Your browser/device and a screenshot of the relevant area.
 
-## Which bot is which
+Before sending a screenshot, hide balances, account identifiers and unrelated personal data unless the specific issue requires them. Never include passwords, sign-in links, verification codes, seed phrases, API keys/secrets or full payment-card details.
 
-ErkeScan runs three customer-facing Telegram bots and they do different jobs. Getting them
-mixed up is the most common reason a message goes unanswered.
+## Payment or missing access
 
-| Bot | What it does |
-|---|---|
-| **@ErkeScanSupportbot** | Support. Answers questions and escalates to a human operator. |
-| **@erkescan_premium_bot** | Payments, subscription status, Discord verification. |
-| **@erkescanalert_bot** | Delivers your custom alerts and premium signals. It does not read replies. |
+Add the plan, payment time and invoice/payment reference. For crypto, the transaction identifier can help locate a payment; send it only in the private support conversation if needed. Do not send another payment just because activation is delayed. First check the email and status on [Subscription](https://app.erkescan.com/payments/billing).
 
-{% hint style="danger" %}
-Those three handles, spelled exactly as above, are the only ErkeScan bots. Look-alike names with
-extra words, digits or different underscores are not ours. No ErkeScan bot or operator will ever
-ask for your password, your seed phrase, your exchange API keys or a full card number.
-{% endhint %}
+Refund and privacy requests can go to email. Published [Terms](https://erkescan.com/terms) and [Privacy Policy](https://erkescan.com/privacy-policy) govern these requests; the bot cannot approve a refund or change a plan's terms itself.
 
-## What to expect
+## Telegram messages missing
 
-- **The support bot answers immediately, 24/7.** It handles most questions on its own.
-- **An operator usually joins an escalated case within an hour** during working hours — a
-  standard Eastern Time (GMT−5) working day.
-- **Complex cases take a few hours.** Messages sent outside working hours are normally picked up
-  the next day.
+Check [Integrations](https://app.erkescan.com/integrations), the subscription, the alert's state and the strategy's Telegram switch. If a connection test fails, report its error; it does not by itself prove that no chat is linked. [Telegram troubleshooting](../integrations/telegram-bot.md).
 
-The bot cannot issue refunds, change the terms of a plan, grant discounts, or give trading
-advice. Ask for any of those and it hands you to an operator instead of guessing.
+## A trading position or bot needs attention
 
-The support bot replies in **Russian or English** based on your message: if it contains Cyrillic
-characters you get Russian, otherwise English. You do not need to set anything.
+Name **Copy trading** and include the exact dashboard message and time. Check the actual position and exchange protection in your own exchange account. Do not assume support chat, a Telegram switch or closing the browser pauses the bot or closes a position. Use the [bot management guide](../copy-trading/manage-and-troubleshoot.md).
 
-## What to include when you report a problem
+Exchange credentials belong only in the relevant secure application setup form. Support does not need you to paste them into chat to diagnose an account problem.
 
-The more of this you send in the first message, the faster it is resolved.
+## Keep the channels separate
 
-1. **The email on your ErkeScan account.** This is how support finds you. Not your Telegram
-   display name.
-2. **The page you were on.** Paste the URL, for example `app.erkescan.com/alerts`.
-3. **What you expected and what actually happened.** One sentence each.
-4. **The time, with your timezone.** "14:20 UTC" or "10:20 New York" — not "this morning".
-5. **The symbol or the alert name**, if the problem involves one of them.
-6. **A screenshot** of the whole page, including the header. For a screener issue, keep the
-   connection indicator visible in the shot.
-7. **Your device and browser**, if it is a display or layout problem.
+* **@ErkeScanSupportbot:** help and escalation.
+* **@erkescan_premium_bot:** subscription purchases and status.
+* **@erkescanalert_bot:** notification delivery; not a support conversation.
 
-For payment problems, add the plan you bought and the approximate time of payment. Do **not**
-paste card numbers into any chat.
-
-## Before you write: three things worth checking
-
-Many reports resolve in seconds.
-
-- **The table is empty or frozen.** Look at the connection state above the table. If a stale or
-  error banner is showing, the data feed — not your account — is the issue. See
-  [troubleshooting](../screener/troubleshooting.md).
-- **An alert never fired.** Check that your Telegram chat is actually linked to your account —
-  press **Test Telegram Bot** on the Integrations page — and that the alert is still active. See
-  [connect integrations](../getting-started/connect-integrations.md) and
-  [managing alerts](../alerts/managing-alerts.md).
-- **You see an upgrade screen instead of the screener.** Your subscription is inactive or
-  expired. Check **Subscription** in the avatar menu, which lands on
-  `app.erkescan.com/payments/billing`.
-
-## Useful links
-
-- Plans and prices: [app.erkescan.com/pricing](https://app.erkescan.com/pricing)
-- Your billing and purchase history: `app.erkescan.com/payments/billing` (avatar menu →
-  **Subscription**)
-- Telegram and Discord connections: `app.erkescan.com/integrations` (avatar menu →
-  **Integrations**)
-- Terms: [erkescan.com/terms](https://erkescan.com/terms)
-- Privacy policy: [erkescan.com/privacy-policy](https://erkescan.com/privacy-policy)
-
-{% hint style="info" %}
-ErkeScan is a data and notification tool. Nothing support tells you is financial advice, and
-no one on the team can tell you what to trade or how much to risk.
-{% endhint %}
-
-**Next:** [Back to the start](../README.md)
+Use the links from the app or this guide to avoid look-alike accounts. For a feature request, describe the task you are trying to complete and what currently prevents it.
