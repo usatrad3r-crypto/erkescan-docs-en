@@ -1,82 +1,33 @@
 # General questions
 
-What ErkeScan is, what it deliberately is not, and whether it fits the way you trade.
+## What is ErkeScan?
 
-### What is ErkeScan
+A web application with a futures screener, custom notifications, strategy signals, Radar, copy trading, a trading journal, charts and GEX. [Choose your starting point](../README.md).
 
-A real-time screener for Binance USDT-margined perpetual futures, with custom Telegram alerts,
-a small set of market-wide charts, and premium signal channels. You watch roughly 670 contracts
-in one table, filter them down, and get told in Telegram when something you care about happens.
+## Which markets are covered?
 
-Full picture: [What is ErkeScan](../what-is-erkescan.md).
+The screener, custom screener alerts and Charts cover Binance USDT perpetual futures. Other tools have their own sources and markets; Vertex copy trading executes on a connected Bybit account. [Data and coverage](../reference/data-and-coverage.md).
 
-### Which market does ErkeScan cover
+## Does it place orders for me?
 
-**Binance USDⓈ-M perpetual futures quoted in USDT**, and nothing else. Not spot, not
-USDC-margined contracts, not dated quarterlies, not other exchanges.
+The screener, alerts and Telegram signal delivery do not place orders. **Copy trading can**, after you connect an exchange account and explicitly activate it. Vertex is available there; Helix copy trading is marked as preparing. [Copy trading](../copy-trading/overview.md).
 
-Around 140 of the rows are not coins at all: Binance lists tokenized equities and commodities as
-perpetuals too, and they sit in the same table with a **STOCK** or **COMMODITY** badge. See
-[data and coverage](../reference/data-and-coverage.md).
+## Can I look before buying?
 
-### Does ErkeScan place trades for me
+The [pricing page](https://app.erkescan.com/pricing) and [signal catalogue](https://app.erkescan.com/signals) are public. Premium live details and paid tools need active access. The standard pricing page offers no public free trial. [Plans](../getting-started/choose-a-plan.md).
 
-No. The screener, the alerts and the signal channels never touch your exchange account. ErkeScan
-reads public market data and sends you messages; you place every order yourself, wherever you
-trade.
+## Do I need Discord or Telegram?
 
-### Do I need trading experience to use it
+Discord is relevant to eligible community membership; it is not required for a standard paid account. Telegram is needed to receive Telegram notifications. You can browse the paid screener without configuring delivery. [Connections](../getting-started/connect-integrations.md).
 
-Some. The screener is a sortable table and the alerts are "if X crosses Y, message me" rules, so
-the mechanics are simple. What takes experience is deciding which number matters and what to do
-about it.
+## English, Russian and mobile
 
-If you are new, work through [first steps](../getting-started/first-steps.md), then keep the
-[glossary](../glossary.md) open while you read the
-[column reference](../screener/column-reference.md).
+Use **EN | RU** for language. Most URLs stay the same; Journal URLs have `/en/` or `/ru/`. No mobile installation is required: open the app in your phone's browser. The screener uses cards on smaller screens, so desktop table instructions may differ.
 
-### Is any of this financial advice
+## Are results or profits guaranteed?
 
-No. ErkeScan is a data tool. Nothing in the product, in this manual, or from support is a
-recommendation to buy or sell anything, and no one can tell you how much to risk.
+No. Historical records and market metrics are not forecasts. Learning the controls is different from understanding futures risk. Review each tool's explanation, and do not treat a notification as an instruction that must be traded.
 
-Where a strategy page shows a track record, that is a record of past trades. It is not a
-forecast and not a guarantee.
+## Where can I get help?
 
-### Which languages does the app support
-
-English and Russian. The **EN | RU** switch sits in the top-right of the header on every page.
-All 57 column headers, all 57 column tooltips, the filter chips and the onboarding tour are
-translated.
-
-Three things to know. Switching language does not change the URL, so there is no
-Russian-language link you can bookmark or send to someone. The language of premium signal
-messages in Telegram comes from your Telegram app's own language, not from this switch. And a
-handful of labels in the column-picker sidebar — the Bar Vol Δ entries for 8h and 1d — stay in
-English in RU mode; the table headers above them are correct.
-
-### Can I see anything before I subscribe
-
-Yes, some of it. Plans and prices are public at
-[app.erkescan.com/pricing](https://app.erkescan.com/pricing). The Signals hub and the individual
-strategy pages are public too — you can read their track records, though live signal details are
-hidden until you subscribe.
-
-The screener itself, the alerts page and the Charts page are not previewable. Without an active
-subscription you get an upgrade panel instead of the table.
-
-### Is there a mobile app to install
-
-No installation is needed. Open [app.erkescan.com](https://app.erkescan.com) in your phone's
-browser. The screener switches to a card layout with five metrics per coin, and the column and
-alert panels open in a bottom drawer.
-
-Alerts arrive in Telegram, so your phone gets those whether or not the site is open.
-
-### How do I reach a human
-
-Through [@ErkeScanSupportbot](https://t.me/ErkeScanSupportbot) on Telegram, or by email at
-support@erkescan.com. See [support](../reference/support.md) for what to include and how long a
-reply takes.
-
-**Next:** [Subscription and billing](subscription.md)
+[Support](../reference/support.md) explains the official contacts and what information to send safely.
